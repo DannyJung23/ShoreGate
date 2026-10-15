@@ -1,0 +1,52 @@
+{
+  "model_type": "RandomForestClassifier",
+  "project": "ShoreGate",
+  "training_event": "Palu tsunami",
+  "target_classes": {
+    "0": "intact",
+    "1": "damaged"
+  },
+  "feature_names": [
+    "S1_pre_VV",
+    "S1_pre_VH",
+    "S1_post_VV",
+    "S1_post_VH",
+    "S2_pre_B2",
+    "S2_pre_B3",
+    "S2_pre_B4",
+    "S2_pre_B8",
+    "S2_pre_B11",
+    "S2_pre_B12",
+    "S2_post_B2",
+    "S2_post_B3",
+    "S2_post_B4",
+    "S2_post_B8",
+    "S2_post_B11",
+    "S2_post_B12",
+    "S1_change_VV",
+    "S1_change_VH",
+    "S2_change_B2",
+    "S2_change_B3",
+    "S2_change_B4",
+    "S2_change_B8",
+    "S2_change_B11",
+    "S2_change_B12"
+  ],
+  "n_features": 24,
+  "feature_definition": "S1/S2 pre-event, post-event, and post-minus-pre features",
+  "classification_threshold": 0.35,
+  "model_parameters": {
+    "n_estimators": 300,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "class_weight": {
+      "0": 1,
+      "1": 3
+    },
+    "random_state": 42
+  },
+  "training_samples": 522380,
+  "training_patches": 193,
+  "validation_method": "GroupShuffleSplit by patch_ids",
+  "validation_random_state": 42
+}
